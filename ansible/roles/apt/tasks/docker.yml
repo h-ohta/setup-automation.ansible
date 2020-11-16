@@ -18,5 +18,4 @@
       - containerd.io
     state: latest
     update_cache: yes
-
   become: yes

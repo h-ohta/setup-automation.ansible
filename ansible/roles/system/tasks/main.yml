@@ -1,0 +1,8 @@
+---
+
+- name: Caps -> Ctrl
+  shell: gsettings set org.gnome.desktop.input-sources xkb-options "['ctrl:nocaps']"
+
+- name: Change Directory Japanese -> English
+  shell: LANG=C xdg-user-dirs-update --force
+

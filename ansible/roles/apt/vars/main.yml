@@ -1,8 +1,8 @@
 ---
 
 ppas:
-  - ppa:graphic-drivers
-  - ppa:solaar-unifing/ppa
+  - ppa:graphics-drivers/ppa
+  - ppa:solaar-unifying/ppa
 
 packages_preinstall:
   - apt-transport-https
@@ -11,11 +11,9 @@ packages_preinstall:
   - git
   - gnupg-agent
   - software-properties-common
+  - snapd
 
 packages_install:
-  - containerd.io
-  - docker-ce
-  - docker-ce-cli
   - nvidia-driver-455
   - solaar
   - vlc

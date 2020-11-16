@@ -1,24 +1,30 @@
 ---
 
-- name: pre install packages
+- name: Preinstall packages
   apt:
     name: "{{ packages_preinstall }}"
     state: latest
     update_cache: yes
   become: yes
 
+- name: Add ppas
+  apt_repository:
+    repo: "{{ item }}"
+    state: present 
+  loop: "{{ ppas }}"
+
 #- name: apt upgrade
 #  apt:
 #    upgrade: yes
 #    update_cache: yes
 
-#- name: install packages
- # apt:
-#    name: "{{ packages_install }}"
-#    state: latest
-#    update_cache: yes
-#  become: yes
+- name: Install packages
+  apt:
+    name: "{{ packages_install }}"
+    state: latest
+    update_cache: yes
+  become: yes
 
-- include: ./google_chrome.yml
-- include: ./endpoint_verification.yml
-- include: ./docker.yml
+#- include: ./google_chrome.yml
+#- include: ./endpoint_verification.yml
+#- include: ./docker.yml
