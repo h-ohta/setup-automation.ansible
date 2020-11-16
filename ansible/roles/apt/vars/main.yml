@@ -4,7 +4,7 @@ ppas:
   - ppa:graphics-drivers/ppa
   - ppa:solaar-unifying/ppa
 
-packages_preinstall:
+apt_packages_preinstall:
   - apt-transport-https
   - ca-certificates
   - curl
@@ -13,7 +13,11 @@ packages_preinstall:
   - software-properties-common
   - snapd
 
-packages_install:
+apt_packages_install:
   - nvidia-driver-{{ NVIDIA_VERSION }}
   - solaar
   - vlc
+
+deb_packages_install:
+  - https://downloads.slack-edge.com/linux_releases/slack-desktop-4.11.1-amd64.deb
+

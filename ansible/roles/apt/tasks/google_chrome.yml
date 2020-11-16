@@ -11,7 +11,7 @@
     state: present
     filename: google-chrome
 
-- name: google-chrome, install 
+- name: google-chrome, install
   apt:
     name: google-chrome-stable
     state: latest
