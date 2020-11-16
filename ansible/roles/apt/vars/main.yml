@@ -17,6 +17,7 @@ apt_packages_install:
   - nvidia-driver-{{ NVIDIA_VERSION }}
   - solaar
   - vlc
+  - gitk
 
 deb_packages_install:
   - https://downloads.slack-edge.com/linux_releases/slack-desktop-4.11.1-amd64.deb
