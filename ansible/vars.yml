@@ -1,3 +1,4 @@
 ---
 LSB_RELEASE: "bionic"
 ARCH: "amd64"
+NVIDIA_VERSION: "455"

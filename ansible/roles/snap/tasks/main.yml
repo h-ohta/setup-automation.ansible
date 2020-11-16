@@ -1,7 +1,7 @@
 ---
 
 - name: Install snaps with classic
-  shell: sudo snap install {{ item }} --classic
+  shell: snap install {{ item }} --classic
   loop: "{{ snap_packages }}"
   become: yes
 

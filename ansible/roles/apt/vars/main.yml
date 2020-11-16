@@ -14,6 +14,6 @@ packages_preinstall:
   - snapd
 
 packages_install:
-  - nvidia-driver-455
+  - nvidia-driver-{{ NVIDIA_VERSION }}
   - solaar
   - vlc
