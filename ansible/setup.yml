@@ -2,6 +2,8 @@
 - hosts: localhost
   connection: local
   become: yes
+  vars_files:
+    - ./vars.yml
   roles:
     - system
     - apt
