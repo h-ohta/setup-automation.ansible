@@ -1,0 +1,7 @@
+---
+- hosts: localhost
+  become: no
+  roles:
+    - system
+    - apt
+    - snap
