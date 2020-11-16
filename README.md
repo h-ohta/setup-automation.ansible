@@ -1,7 +1,6 @@
 # setup_automation.ansible
 
 ## 引数設定（./ansible/vars.yaml）
-- LSB_RELEASE: Ubuntuのバージョン固有名詞
 - ARCH: アーキテクチャ
 - NVIDIA_VERSION: nvidiaドライバのバージョン
 
@@ -12,6 +11,7 @@
 - nvidia-driver-[NVIDIA_VERSION]
 - slack (amd64, 4.11.1)
 - vscode
+- gitk
 
 ## 導入される設定
 - Caps -> Ctrlに変更
