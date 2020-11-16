@@ -1,6 +1,6 @@
 # setup_automation.ansible
 
-## 引数設定（vars.yaml）
+## 引数設定（./ansible/vars.yaml）
 - LSB_RELEASE: Ubuntuのバージョン固有名詞
 - ARCH: アーキテクチャ
 - NVIDIA_VERSION: nvidiaドライバのバージョン
