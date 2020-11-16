@@ -2,7 +2,7 @@
 
 - name: Add an Apt signing key, uses whichever key is at the URL
   apt_key:
-    url: "{{ apt-keys }}"
+    url: "{{ sign_keys }}"
     state: present
 
 - name: add repository for google-chrome
@@ -12,26 +12,23 @@
     filename: google-chrome
 
 - name: add repository for endpoint-verification
-   apt_repository:
-     repo: "deb https://packages.cloud.google.com/apt endpoint-verification main"
-     state: present
-     filename: endpoint-verification
-
-- name: add apt-repos
   apt_repository:
-    repo: "{{ apt-repos }}"
+    repo: "deb https://packages.cloud.google.com/apt endpoint-verification main"
+    state: present
+    filename: endpoint-verification
+
+- name: add other_repos
+  apt_repository:
+    repo: "{{ other_repos }}"
 
 - name: add ppas
   apt_repository:
     repo: "{{ repositories }}"
 
-- name: apt update
-  apt:
-    update_cache: yes
-
 - name: apt upgrade
   apt:
     upgrade: yes
+    update_cache: yes
 
 - name: install packages
   apt:

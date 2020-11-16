@@ -1,6 +1,7 @@
 ---
 - hosts: localhost
-  become: no
+  connection: local
+  become: yes
   roles:
     - system
     - apt

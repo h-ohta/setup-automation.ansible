@@ -1,6 +1,6 @@
 ---
 
-apt-keys:
+sign_keys:
   - https://dl.google.com/linux/linux_signing_key.pub
   - https://download.docker.com/linux/ubuntu/gpg
   - https://packages.cloud.google.com/apt/doc/apt-key.gpg
@@ -9,7 +9,7 @@ ppas:
   - ppa:graphic-drivers
   - ppa:solaar-unifing/ppa
 
-apt-repos:
+other_repos:
   - "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
 
 packages_to_install:
