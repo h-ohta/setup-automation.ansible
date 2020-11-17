@@ -18,14 +18,19 @@
     upgrade: yes
     update_cache: yes
 
-- name: Install packages
+- name: Install apt packages
   apt:
     name: "{{ apt_packages_install }}"
     state: latest
     update_cache: yes
   become: yes
 
-- include: ./deb.yml
+- name: Install deb packages
+  apt:
+    deb: "{{ item }}"
+  loop: "{{ deb_packages_install }}"
+  become: yes
+
 - include: ./google_chrome.yml
 - include: ./endpoint_verification.yml
 - include: ./docker.yml

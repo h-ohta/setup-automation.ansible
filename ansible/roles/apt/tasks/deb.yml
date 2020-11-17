@@ -1,7 +1,0 @@
----
-
-- name: deb, install
-  apt:
-    deb: "{{ item }}"
-  loop: "{{ deb_packages_install }}"
-  become: yes
