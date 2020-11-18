@@ -21,4 +21,6 @@
   become: yes
 
 - name: vscode, remove used files
-  shell: rm -rf ./packages.microsoft.gpg
+  file:
+    path=./packages.microsoft.gpg
+    state=absent
