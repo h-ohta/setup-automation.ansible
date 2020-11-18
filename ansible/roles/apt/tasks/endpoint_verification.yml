@@ -4,12 +4,14 @@
   apt_key:
     url: https://packages.cloud.google.com/apt/doc/apt-key.gpg
     state: present
+  become: yes
 
 - name: endpoint-verification, add repository
   apt_repository:
     repo: deb [arch={{ ARCH }}] https://packages.cloud.google.com/apt endpoint-verification main
     state: present
     filename: endpoint-verification
+  become: yes
 
 - name: endpoint-verification, install
   apt:

@@ -12,11 +12,13 @@
     repo: "{{ item }}"
     state: present
   loop: "{{ ppas }}"
+  become: yes
 
 - name: apt upgrade
   apt:
     upgrade: yes
     update_cache: yes
+  become: yes
 
 - name: Install apt packages
   apt:
