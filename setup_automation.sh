@@ -17,7 +17,7 @@ case $answer in
       sudo apt install -y ansible
     fi
 
-    ansible-playbook -i localhost, $SCRIPT_DIR/ansible/setup.yml -i ./$SCRIPT_DIR/inventories/local-dev.ini --ask-become-pass
+    ansible-playbook -vv -i localhost, $SCRIPT_DIR/ansible/setup.yml -i ./$SCRIPT_DIR/inventories/local-dev.ini --ask-become-pass
     echo -e "\e[32m Complete \e[0m"
     ;;
   [nN]* )
