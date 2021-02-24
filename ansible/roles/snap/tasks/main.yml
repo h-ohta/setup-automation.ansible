@@ -1,7 +1,0 @@
----
-
-- name: Install snaps with classic
-  shell: snap install {{ item }} --classic
-  loop: "{{ snap_packages }}"
-  become: yes
-
