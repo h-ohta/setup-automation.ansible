@@ -22,5 +22,5 @@ apt_packages_install:
   - simplescreenrecorder
 
 deb_packages_install:
-  - https://downloads.slack-edge.com/linux_releases/slack-desktop-4.11.1-amd64.deb
+  - https://downloads.slack-edge.com/linux_releases/slack-desktop-4.13.0-amd64.deb
 
