@@ -13,6 +13,7 @@ apt_packages_preinstall:
   - gnupg-agent
   - software-properties-common
   - snapd
+  - python3-pip
 
 apt_packages_install:
   - nvidia-driver-{{ NVIDIA_VERSION }}
