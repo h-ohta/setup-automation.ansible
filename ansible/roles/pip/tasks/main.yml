@@ -1,0 +1,8 @@
+---
+
+- name: Install pip packages
+  pip:
+    name: "{{ pip_packages }}"
+  become: yes
+
+
