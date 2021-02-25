@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Exec=solaar -w hide
+Hidden=false
+NoDisplay=false
+X-GNOME-Autostart-enabled=true
+Name[ja_JP]=solaar
+Name=solaar
+Comment[ja_JP]=
+Comment=
