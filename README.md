@@ -6,7 +6,7 @@
 - Ubuntu16.04
 
 ## 引数設定（./ansible/vars.yaml）
-- ARCH: アーキテクチャ
+- ARCH: CPUアーキテクチャ
 - NVIDIA_VERSION: nvidiaドライバのバージョン
 
 ## 導入されるソフトウェア
