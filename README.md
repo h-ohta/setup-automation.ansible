@@ -17,7 +17,6 @@
 - gitk
 - solaar
 - cpplint
-- 
 
 ## 導入される設定
 - Caps -> Ctrlに変更
