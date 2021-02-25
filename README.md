@@ -12,6 +12,7 @@
 - slack (amd64, 4.11.1)
 - vscode
 - gitk
+- solaar
 
 ## 導入される設定
 - Caps -> Ctrlに変更
