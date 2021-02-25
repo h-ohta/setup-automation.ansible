@@ -2,8 +2,6 @@
 
 ## 対象OS（確認済み）
 - Ubuntu20.04
-- Ubuntu18.04
-- Ubuntu16.04
 
 ## 引数設定（./ansible/vars.yaml）
 - ARCH: CPUアーキテクチャ
@@ -19,6 +17,7 @@
 - gitk
 - solaar
 - cpplint
+- 
 
 ## 導入される設定
 - Caps -> Ctrlに変更
