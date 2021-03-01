@@ -14,6 +14,7 @@ apt_packages_preinstall:
   - software-properties-common
   - snapd
   - python3-pip
+  - python-is-python3
 
 apt_packages_install:
   - nvidia-driver-{{ NVIDIA_VERSION }}
