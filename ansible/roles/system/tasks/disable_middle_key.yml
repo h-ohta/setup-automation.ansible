@@ -18,5 +18,9 @@
   with_fileglob:
     - ../files/.xbindkeysrc
 
-- name: apply
-  shell: xbindkeys -p
+- name: auto apply
+  lineinfile:
+    dest: ~/.xsessionrc
+    line: xbindkeys -p
+    state: present
+    create: yes
