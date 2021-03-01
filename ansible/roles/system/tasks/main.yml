@@ -12,3 +12,5 @@
     dest: ~/.config/autostart/
   with_fileglob:
     - ../autostart_files/*.desktop
+
+- include: ./disable_middle_key.yml
