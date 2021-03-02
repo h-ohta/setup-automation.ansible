@@ -1,4 +1,4 @@
-# setup_automation.ansible
+# setup-automation.ansible
 
 ## 対象OS（確認済み）
 - Ubuntu20.04
