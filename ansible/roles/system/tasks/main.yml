@@ -1,16 +1,6 @@
 ---
 
-- name: Caps -> Ctrl
-  shell: gsettings set org.gnome.desktop.input-sources xkb-options "['ctrl:nocaps']"
-
-- name: Change Directory Japanese -> English
-  shell: LANG=C xdg-user-dirs-update --force
-
-- name: autostart, file copy
-  copy:
-    src: "{{ item }}"
-    dest: ~/.config/autostart/
-  with_fileglob:
-    - ../autostart_files/*.desktop
-
+- include: ./caps_to_ctrl.yml
+- include: ./change_directory_to_en.yml
+- include: ./copy_autostart.yml
 - include: ./disable_middle_key.yml
