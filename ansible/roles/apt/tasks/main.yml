@@ -7,13 +7,6 @@
     update_cache: yes
   become: yes
 
-- name: Add ppas
-  apt_repository:
-    repo: "{{ item }}"
-    state: present
-  loop: "{{ ppas }}"
-  become: yes
-
 - name: apt upgrade
   apt:
     upgrade: yes
@@ -38,3 +31,4 @@
 - include: ./docker.yml
 - include: ./vscode.yml
 - include: ./solaar.yml
+- include: ./simplescreenrecorder.yml

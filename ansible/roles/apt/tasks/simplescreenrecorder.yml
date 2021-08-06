@@ -1,0 +1,17 @@
+---
+
+- name: simplescreenrecorder tasks
+  tags: simplescreenrecorder
+  block:
+  - name: solaar, add ppas
+    apt_repository:
+      repo: ppa:maarten-baert/simplescreenrecorder
+      state: present
+    become: yes
+
+  - name: simplescreenrecorder, install
+    apt:
+      name: simplescreenrecorder
+      state: latest
+      update_cache: yes
+    become: yes

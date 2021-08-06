@@ -1,4 +1,5 @@
 ---
+
 - name: endpoint-verification tasks
   tags: endpoint-verification
   block:

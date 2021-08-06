@@ -1,9 +1,5 @@
 ---
 
-ppas:
-  - ppa:graphics-drivers/ppa
-  - ppa:maarten-baert/simplescreenrecorder
-
 apt_packages_preinstall:
   - apt-transport-https
   - ca-certificates
@@ -16,10 +12,8 @@ apt_packages_preinstall:
   - python-is-python3
 
 apt_packages_install:
-  - nvidia-driver-{{ NVIDIA_VERSION }}
   - vlc
   - gitk
-  - simplescreenrecorder
 
 deb_packages_install:
   - https://downloads.slack-edge.com/linux_releases/slack-desktop-4.13.0-amd64.deb

@@ -1,0 +1,17 @@
+---
+
+- name: nvidia_driver tasks
+  tags: nvidia_driver
+  block:
+  - name: nvidia_driver, add ppas
+    apt_repository:
+      repo: ppa:graphics-drivers/ppa
+      state: present
+    become: yes
+
+  - name: nvidia_driver, install
+    apt:
+      name: nvidia-driver-{{ NVIDIA_VERSION }}
+      state: latest
+      update_cache: yes
+    become: yes
