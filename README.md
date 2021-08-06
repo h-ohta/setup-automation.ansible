@@ -13,9 +13,9 @@
 $ ./setup_automation.sh
 
 // run individual tasks
-$ ansible-playbook setup.yml --list-tasks  // list all tasks with tags
-$ ansible-playbook setup.yaml --tags [specified tags]  // run specified tasks
-$ ansible-playbook setup.yaml --tags caps_to_crtl  // for example...
+$ ansible-playbook ansible/setup.yml --list-tasks  // list all tasks with tags
+$ ansible-playbook ansible/setup.yaml --tags [specified tags]  // run specified tasks
+$ ansible-playbook ansible/setup.yaml --tags caps_to_crtl  // for example...
 ```
 
 ## Registered Tags
