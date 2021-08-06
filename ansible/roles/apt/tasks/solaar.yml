@@ -3,7 +3,7 @@
 - name: solaar tasks
   tags: solaar
   block:
-  - name: Add ppas
+  - name: solaar, add ppas
     apt_repository:
       repo: ppa:solaar-unifying/ppa
       state: present
@@ -16,7 +16,7 @@
       update_cache: yes
     become: yes
 
-  - name: autostart, file copy
+  - name: solaar, file copy
     copy:
       src: "{{ item }}"
       dest: ~/.config/autostart/
