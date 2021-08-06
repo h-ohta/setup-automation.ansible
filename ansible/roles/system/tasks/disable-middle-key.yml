@@ -1,9 +1,9 @@
 ---
 
-- name: disable_middle_key task
-  tags: disable_middle_key
+- name: disable-middle-key task
+  tags: disable-middle-key
   block:
-  - name: disable_middle_key, install
+  - name: disable-middle-key, install
     apt:
       name:
         - xbindkeys
@@ -14,14 +14,14 @@
     become: yes
 
 
-  - name: disable_middle_key, file copy
+  - name: disable-middle-key, file copy
     copy:
       src: "{{ item }}"
       dest: ~/
     with_fileglob:
       - ../files/.xbindkeysrc
 
-  - name: disable_middle_key, auto apply
+  - name: disable-middle-key, auto apply
     lineinfile:
       dest: ~/.xsessionrc
       line: xbindkeys -p

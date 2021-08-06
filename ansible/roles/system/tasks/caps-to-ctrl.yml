@@ -2,4 +2,4 @@
 
 - name: Caps -> Ctrl
   shell: gsettings set org.gnome.desktop.input-sources xkb-options "['ctrl:nocaps']"
-  tags: caps_to_ctrl
+  tags: caps-to-ctrl

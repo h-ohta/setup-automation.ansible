@@ -14,24 +14,24 @@ $ ./setup_automation.sh
 
 // run individual tasks
 $ ansible-playbook ansible/setup.yml --list-tasks  // list all tasks with tags
-$ ansible-playbook ansible/setup.yaml --tags [specified tags]  // run specified tasks
-$ ansible-playbook ansible/setup.yaml --tags caps_to_crtl  // for example...
+$ ansible-playbook ansible/setup.yaml --tags [specified tags] --ask-become-pass // run specified tasks
+$ ansible-playbook ansible/setup.yaml --tags caps_to_crtl --ask-become-pass // for example...
 ```
 
 ## Registered Tags
 
 ### System Settings
 
-- caps_to_ctrl: change caps key to ctrl
-- change_dir_jpn_to_en: Change Directory Japanese -> English
-- disable_middle_key: disable middle key for ThinkPad X1 Extreme
-- nvidia_driver: Install nvidia driver
+- caps-to-ctrl: change caps key to ctrl
+- chdir-to-en: Change Directory Japanese -> English
+- disable-middle-key: disable middle key for ThinkPad X1 Extreme
+- nvidia-driver: Install nvidia driver
 
 ### Software Instalation
 
 - docker
 - endpoint-verification
-- google_chrome
+- google-chrome
 - simplescreenrecorder
 - solaar
 - vscode

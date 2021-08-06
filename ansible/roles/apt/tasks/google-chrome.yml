@@ -1,7 +1,7 @@
 ---
 
-- name: google_chrome tasks
-  tags: google_chrome
+- name: google-chrome tasks
+  tags: google-chrome
   block:
   - name: google-chrome, Add an Apt signing key, uses whichever key is at the URL
     apt_key:

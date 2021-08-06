@@ -1,6 +1,6 @@
 ---
 
 - include: ./nvidia-driver.yml
-- include: ./caps_to_ctrl.yml
-- include: ./change_directory_to_en.yml
-- include: ./disable_middle_key.yml
+- include: ./caps-to-ctrl.yml
+- include: ./chdir-to-en.yml
+- include: ./disable-middle_key.yml

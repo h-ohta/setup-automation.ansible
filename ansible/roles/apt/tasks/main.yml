@@ -26,8 +26,8 @@
   loop: "{{ deb_packages_install }}"
   become: yes
 
-- include: ./google_chrome.yml
-- include: ./endpoint_verification.yml
+- include: ./google-chrome.yml
+- include: ./endpoint-verification.yml
 - include: ./docker.yml
 - include: ./vscode.yml
 - include: ./solaar.yml
