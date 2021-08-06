@@ -5,6 +5,6 @@
   vars_files:
     - ./vars.yml
   roles:
-    - system
-    - apt
-    - pip
+    - { role: system, tags: system }
+    - { role: apt, tags: apt }
+    - { role: pip, tags: pip }
