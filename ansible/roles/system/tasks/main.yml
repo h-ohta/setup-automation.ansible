@@ -3,4 +3,4 @@
 - include: ./nvidia-driver.yml
 - include: ./caps-to-ctrl.yml
 - include: ./chdir-to-en.yml
-- include: ./disable-middle_key.yml
+- include: ./disable-middle-key.yml
