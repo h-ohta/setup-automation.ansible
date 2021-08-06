@@ -2,7 +2,6 @@
 
 ppas:
   - ppa:graphics-drivers/ppa
-  - ppa:solaar-unifying/ppa
   - ppa:maarten-baert/simplescreenrecorder
 
 apt_packages_preinstall:
@@ -18,7 +17,6 @@ apt_packages_preinstall:
 
 apt_packages_install:
   - nvidia-driver-{{ NVIDIA_VERSION }}
-  - solaar
   - vlc
   - gitk
   - simplescreenrecorder

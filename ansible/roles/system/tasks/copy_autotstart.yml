@@ -1,8 +1,0 @@
----
-
-- name: autostart, file copy
-  copy:
-    src: "{{ item }}"
-    dest: ~/.config/autostart/
-  with_fileglob:
-    - ../autostart_files/*.desktop

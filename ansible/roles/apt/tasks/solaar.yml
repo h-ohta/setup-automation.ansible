@@ -1,0 +1,24 @@
+---
+
+- name: solaar tasks
+  tags: solaar
+  block:
+  - name: Add ppas
+    apt_repository:
+      repo: ppa:solaar-unifying/ppa
+      state: present
+    become: yes
+
+  - name: solaar, install
+    apt:
+      name: solaar
+      state: latest
+      update_cache: yes
+    become: yes
+
+  - name: autostart, file copy
+    copy:
+      src: "{{ item }}"
+      dest: ~/.config/autostart/
+    with_fileglob:
+      - ./solaar.desktop

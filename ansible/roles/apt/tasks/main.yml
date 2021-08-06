@@ -37,3 +37,4 @@
 - include: ./endpoint_verification.yml
 - include: ./docker.yml
 - include: ./vscode.yml
+- include: ./solaar.yml

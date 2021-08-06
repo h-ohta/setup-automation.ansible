@@ -2,5 +2,4 @@
 
 - include: ./caps_to_ctrl.yml
 - include: ./change_directory_to_en.yml
-- include: ./copy_autostart.yml
 - include: ./disable_middle_key.yml
