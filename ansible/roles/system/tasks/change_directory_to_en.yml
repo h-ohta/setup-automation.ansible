@@ -2,3 +2,4 @@
 
 - name: Change Directory Japanese -> English
   shell: LANG=C xdg-user-dirs-update --force
+  tags: change_dir_jpn_to_en
