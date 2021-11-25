@@ -26,7 +26,7 @@ nvidia_version: "460"
 # ansible/vars.yml
 ...
 nvidia_autoinstall: false
-nvidia_version: "470"
+nvidia_version: "460"
 ...
 ```
 

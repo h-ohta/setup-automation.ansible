@@ -29,4 +29,5 @@ pip_packages:
   - ansible-lint
 
 # nvidia-driver
-nvidia_autoinstall: true
+nvidia_autoinstall: false
+nvidia_version: 460
