@@ -21,5 +21,6 @@
     - { role: simplescreenrecorder, tags: ["simplescreenrecorder"] }
     - { role: slack, tags: ["slack"] }
     - { role: solaar, tags: ["solaar"] }
+    - { role: tlp-powertop, tags: ["tlp-powertop"]}
     - { role: touchpad-indicator, tags: ["touchpad-indicator"]}
     - { role: vscode, tags: ["vscode"] }

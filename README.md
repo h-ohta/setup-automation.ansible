@@ -51,5 +51,6 @@ nvidia_version: "470"
 - simplescreenrecorder
 - slack
 - solaar
+- tlp-powertop
 - touchpad-indicator
 - vscode
