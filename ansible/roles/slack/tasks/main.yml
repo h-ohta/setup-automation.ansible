@@ -1,0 +1,21 @@
+---
+
+- name: install gdebi
+  ansible.builtin.apt: 
+    name: gdebi
+    state: present
+    update_cache: yes
+  become: yes
+
+- name: Get deb
+  ansible.builtin.get_url:
+    url: https://downloads.slack-edge.com/releases/linux/{{ slack_version }}/prod/x64/slack-desktop-{{ slack_version }}-amd64.deb
+    dest: /tmp
+    mode: 0644
+  register: get_url
+
+- name: Install slack
+  command: gdebi --non-interactive {{ get_url.dest }}
+  register: result
+  changed_when: result.rc != 0
+  become: yes

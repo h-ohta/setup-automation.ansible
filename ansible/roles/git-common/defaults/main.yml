@@ -1,0 +1,5 @@
+---
+
+git_config_items:
+  - { name: user.name, value: "" }
+  - { name: user.email, value: "" }

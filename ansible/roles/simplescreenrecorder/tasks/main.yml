@@ -1,0 +1,14 @@
+---
+
+- name: Add ppas
+  apt_repository:
+    repo: ppa:maarten-baert/simplescreenrecorder
+    state: present
+  become: yes
+
+- name: Install
+  ansible.builtin.apt:
+    name: simplescreenrecorder
+    state: present
+    update_cache: yes
+  become: yes

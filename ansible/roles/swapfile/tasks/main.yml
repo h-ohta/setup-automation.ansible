@@ -1,0 +1,42 @@
+---
+
+- name: Check /swapfile
+  stat:
+    path: "{{ swap_file_path }}"
+  register: exists_swapfile
+
+- name: Swapoff old swapfile
+  command: swapoff {{ swap_file_path }}
+  become: yes
+  when: exists_swapfile.stat.exists
+
+- name: Remove old swapfile
+  ansible.builtin.file:
+    path: "{{ swap_file_path }}"
+    state: absent
+  become: yes
+  when: exists_swapfile.stat.exists
+
+- name: Allocate
+  command: fallocate -l {{ swap_file_size }} {{ swap_file_path }}
+  become: yes
+  register: alloc
+  changed_when: alloc.rc != 0
+
+- name: Edit permission
+  ansible.builtin.file:
+    path: "{{ swap_file_path }}"
+    mode: 0600
+  become: yes
+
+- name: Make swap 
+  command: mkswap {{ swap_file_path }}
+  become: yes
+  register: mkswap
+  changed_when: mkswap.rc != 0
+
+- name: Enable swap
+  command: swapon {{ swap_file_path }}
+  become: yes
+  register: swapon
+  changed_when: swapon.rc != 0

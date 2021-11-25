@@ -1,0 +1,13 @@
+---
+
+- name: Install apt packages
+  ansible.builtin.apt:
+    name: "{{ apt_packages }}"
+    state: present 
+    update_cache: yes
+  become: yes
+
+- name: Intall pip packages
+  ansible.builtin.pip:
+    name: "{{ pip_packages }}"
+  become: yes

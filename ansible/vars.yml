@@ -1,3 +1,15 @@
 ---
-ARCH: "amd64"
-NVIDIA_VERSION: "460"
+# common
+arch: "amd64"
+
+# git-common
+git_config_items:
+  - { name: user.name, value: h-ohta }
+  - { name: user.email, value: hiroki.ota@tier4.jp }
+  - { name: color.ui, value: true}
+  - { name: core.editor, value: nano}
+  - { name: alias.chk, value: checkout}
+  - { name: alias.fetchpt, value: fetch --prune --tags}
+
+# nvidia-driver
+nvidia_autoinstall: true

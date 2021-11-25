@@ -1,0 +1,73 @@
+---
+
+- name: Install
+  ansible.builtin.apt:
+    name:
+      - xbindkeys
+      - xsel
+      - xdotool
+    state: present
+    update_cache: yes
+  become: yes
+
+
+- name: Copy files
+  ansible.builtin.copy:
+    src: "{{ item }}"
+    dest: ~/
+    mode: 0644
+  with_fileglob:
+    - .xbindkeysrc
+
+- name: Apply auto start
+  ansible.builtin.lineinfile:
+    dest: ~/.xsessionrc
+    line: xbindkeys -p
+    state: present
+    create: yes
+    mode: 0644
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    

@@ -5,6 +5,20 @@
   vars_files:
     - ./vars.yml
   roles:
-    - { role: system, tags: system }
-    - { role: apt, tags: apt }
-    - { role: pip, tags: pip }
+    # system
+    - { role: caps-to-ctrl, tags: ["caps-to-ctrl"] }
+    - { role: disable-paste-middle-key, tags: ["disable-paste-middle-key"] }
+    - { role: nvidia-driver, tags: ["nvidia-driver"] }
+    - { role: swapfile, tags: ["swapfile"] }
+    - { role: xdg-user-dirs-update-lang-c, tags: ["xdg-user-dirs-update-lang-c"] }
+    # application
+    - { role: docker, tags: ["docker"] }
+    - { role: endpoint-verification, tags: ["endpoint-verification"] }
+    - { role: git-common, tags: ["git-common"]}
+    - { role: google-chrome, tags: ["google-chrome"] }
+    - { role: install-apt-pip, tags: ["install-apt-pip"] }
+    - { role: nanorc, tags: ["nanorc"] }
+    - { role: simplescreenrecorder, tags: ["simplescreenrecorder"] }
+    - { role: slack, tags: ["slack"] }
+    - { role: solaar, tags: ["solaar"] }
+    - { role: vscode, tags: ["vscode"] }

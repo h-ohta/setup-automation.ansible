@@ -1,0 +1,25 @@
+---
+
+- name: Install
+  ansible.builtin.apt:
+    name:
+      - git
+      - gitk
+    state: present
+    update_cache: yes
+  become: yes
+
+- name: Add items to ~/.gitconfig
+  git_config:
+    name: "{{ item.name }}"
+    scope: global
+    value: "{{ item.value }}"
+  with_items: "{{ git_config_items }}"
+
+
+
+
+
+
+
+

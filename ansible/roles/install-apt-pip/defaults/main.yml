@@ -1,0 +1,17 @@
+---
+
+apt_packages:
+  - apt-transport-https
+  - ca-certificates
+  - curl
+  - git
+  - gnupg-agent
+  - software-properties-common
+  - snapd
+  - python3-pip
+  - python-is-python3
+  - vlc
+
+pip_packages:
+  - cpplint
+  - ansible-lint

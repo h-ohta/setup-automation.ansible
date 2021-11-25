@@ -1,0 +1,22 @@
+---
+
+- name: Add ppas
+  ansible.builtin.apt_repository:
+    repo: ppa:solaar-unifying/ppa
+    state: present
+  become: yes
+
+- name: Install
+  ansible.builtin.apt:
+    name: solaar
+    state: present
+    update_cache: yes
+  become: yes
+
+- name: Copy files
+  ansible.builtin.copy:
+    src: "{{ item }}"
+    dest: ~/.config/autostart/
+    mode: preserve
+  with_fileglob:
+    - ./*
