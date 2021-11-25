@@ -21,4 +21,5 @@
     - { role: simplescreenrecorder, tags: ["simplescreenrecorder"] }
     - { role: slack, tags: ["slack"] }
     - { role: solaar, tags: ["solaar"] }
+    - { role: touchpad-indicator, tags: ["touchpad-indicator"]}
     - { role: vscode, tags: ["vscode"] }

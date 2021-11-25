@@ -51,4 +51,5 @@ nvidia_version: "470"
 - simplescreenrecorder
 - slack
 - solaar
+- touchpad-indicator
 - vscode
