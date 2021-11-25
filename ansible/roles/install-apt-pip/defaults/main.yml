@@ -10,7 +10,6 @@ apt_packages:
   - snapd
   - python3-pip
   - python-is-python3
-  - vlc
 
 pip_packages:
   - cpplint

@@ -11,5 +11,22 @@ git_config_items:
   - { name: alias.chk, value: checkout}
   - { name: alias.fetchpt, value: fetch --prune --tags}
 
+# install-apt-pip
+apt_packages:
+  - apt-transport-https
+  - ca-certificates
+  - curl
+  - git
+  - gnupg-agent
+  - software-properties-common
+  - snapd
+  - python3-pip
+  - python-is-python3
+  - vlc
+
+pip_packages:
+  - cpplint
+  - ansible-lint
+
 # nvidia-driver
 nvidia_autoinstall: true
