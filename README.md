@@ -1,12 +1,5 @@
 # setup-automation.ansible
 
-## Compatible OS
-- Ubuntu20.04
-
-## Global Arguments（./ansible/vars.yaml）
-- ARCH: CPU Architecture
-- NVIDIA_VERSION: nvidiaドライバのバージョン
-
 ## Commands
 ```
 // run all tasks
@@ -14,24 +7,48 @@ $ ./setup_automation.sh
 
 // run individual tasks
 $ ansible-playbook ansible/setup.yml --list-tasks  // list all tasks with tags
-$ ansible-playbook ansible/setup.yaml --tags [specified tags] --ask-become-pass // run specified tasks
+$ ansible-playbook ansible/setup.yaml --tags [some tags] --ask-become-pass // run some tasks
 $ ansible-playbook ansible/setup.yaml --tags caps_to_crtl --ask-become-pass // for example...
+```
+
+## Global Variables
+You can edit your specified variables in `ansible/vars.yml`.
+It overrides local variables in each roles as follows.
+
+``` yaml
+# ansible/nvidia-driver/defaults/main.yml
+---
+nvidia_autoinstall: true
+nvidia_version: "460"
+```
+
+``` yaml
+# ansible/vars.yml
+...
+nvidia_autoinstall: false
+nvidia_version: "470"
+...
 ```
 
 ## Registered Tags
 
-### System Settings
+### For System Settings
 
 - caps-to-ctrl: change caps key to ctrl
-- chdir-to-en: Change Directory Japanese -> English
-- disable-middle-key: disable middle key for ThinkPad X1 Extreme
-- nvidia-driver: Install nvidia driver
+- xdg-user-dirs-update-lang-c: Change Directory Japanese -> English
+- disable-paste-middle-key: disable middle key paste for ThinkPad X1 Extreme
+- nvidia-driver: Install nvidia driver. `nvidia_autoinstall` variable is enabled by default.
+- swapfile: change swapfile size to your specified
 
-### Software Instalation
+### For Installing Software
 
 - docker
 - endpoint-verification
+- git-common: install and add `git_config_items` to .gitconfig
 - google-chrome
+- install-apt-pip: install packages of `apt_packages` and `pip_packages` variables
+- nanorc: locate `.nanorc` to your home directory
 - simplescreenrecorder
+- slack
 - solaar
 - vscode
