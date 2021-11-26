@@ -6,6 +6,7 @@
     - ./vars.yml
   roles:
     # system
+    - { role: bash-aliases, tags: ["bash-aliases"] }
     - { role: caps-to-ctrl, tags: ["caps-to-ctrl"] }
     - { role: disable-paste-middle-key, tags: ["disable-paste-middle-key"] }
     - { role: nvidia-driver, tags: ["nvidia-driver"] }

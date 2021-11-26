@@ -1,0 +1,10 @@
+---
+
+- name: Add items to ~/.bash_aliases
+  ansible.builtin.lineinfile:
+    dest: ~/.bash_aliases
+    line: "alias {{ item.name }}='{{ item.command }}'"
+    state: present
+    create: yes
+    mode: 0644
+  with_items: "{{ bash_alias_items }}"
