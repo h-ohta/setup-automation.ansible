@@ -14,6 +14,7 @@
     # application
     - { role: docker, tags: ["docker"] }
     - { role: endpoint-verification, tags: ["endpoint-verification"] }
+    - { role: fzf, tags: ["fzf"]}
     - { role: git-common, tags: ["git-common"]}
     - { role: google-chrome, tags: ["google-chrome"] }
     - { role: install-apt-pip, tags: ["install-apt-pip"] }
