@@ -44,6 +44,7 @@ nvidia_version: "460"
 
 - docker
 - endpoint-verification
+- fzf
 - git-common: install and add `git_config_items` to .gitconfig
 - google-chrome
 - install-apt-pip: install packages of `apt_packages` and `pip_packages` variables
