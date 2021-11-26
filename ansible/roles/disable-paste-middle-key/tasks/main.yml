@@ -22,7 +22,7 @@
 - name: Apply auto start
   ansible.builtin.lineinfile:
     dest: ~/.xsessionrc
-    line: xbindkeys -p
+    line: "xbindkeys -p"
     state: present
     create: yes
     mode: 0644
