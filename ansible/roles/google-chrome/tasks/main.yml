@@ -8,7 +8,7 @@
 
 - name: add repository
   ansible.builtin.apt_repository:
-    repo: deb [arch={{ arch }}] http://dl.google.com/linux/chrome/deb/ stable main
+    repo: deb [arch={{ arch }}] https://dl.google.com/linux/chrome/deb/ stable main
     state: present
     filename: google-chrome
   become: yes
