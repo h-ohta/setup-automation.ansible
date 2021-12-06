@@ -1,7 +1,7 @@
 ---
 
 - name: install
-  ansible.builtin.apt: 
+  ansible.builtin.apt:
     name: fzf
     state: present
     update_cache: yes
@@ -17,6 +17,5 @@
     mode: 0644
   with_items:
     - "# fzf settings"
-    - source /usr/share/doc/fzf/examples/key-bindings.bash
-    - source /usr/share/doc/fzf/examples/completion.bash
-
+    - "source /usr/share/doc/fzf/examples/key-bindings.bash"
+    - "source /usr/share/doc/fzf/examples/completion.bash"
