@@ -15,7 +15,7 @@
     - { role: xdg-user-dirs-update-lang-c, tags: ["xdg-user-dirs-update-lang-c"] }
     # application
     - { role: docker, tags: ["docker"] }
-    - { role: endpoint-verification, tags: ["endpoint-verification"] }
+    # - { role: endpoint-verification, tags: ["endpoint-verification"] }
     - { role: fzf, tags: ["fzf"]}
     - { role: git-common, tags: ["git-common"]}
     - { role: google-chrome, tags: ["google-chrome"] }
