@@ -10,6 +10,7 @@
     - { role: caps-to-ctrl, tags: ["caps-to-ctrl"] }
     - { role: disable-paste-middle-key, tags: ["disable-paste-middle-key"] }
     - { role: nvidia-driver, tags: ["nvidia-driver"] }
+    - { role: ros-localhost-only, tags: ["ros-localhost-only"] }
     - { role: swapfile, tags: ["swapfile"] }
     - { role: xdg-user-dirs-update-lang-c, tags: ["xdg-user-dirs-update-lang-c"] }
     # application
