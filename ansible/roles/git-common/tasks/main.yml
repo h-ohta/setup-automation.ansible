@@ -1,13 +1,17 @@
 ---
+- name: Add ppas
+  ansible.builtin.apt_repository:
+    repo: ppa:git-core/ppa
+    state: present
+  become: yes
 
 - name: Install
   ansible.builtin.apt:
-    name:
-      - git
-      - gitk
+    name: "{{ item }}"
     state: present
     update_cache: yes
   become: yes
+  with_items: "{{ git_install_items }}"
 
 - name: Add items to ~/.gitconfig
   git_config:
@@ -15,11 +19,3 @@
     scope: global
     value: "{{ item.value }}"
   with_items: "{{ git_config_items }}"
-
-
-
-
-
-
-
-
