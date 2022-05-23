@@ -1,8 +1,0 @@
----
-git_install_items:
-  - git
-  - gitk
-
-git_config_items:
-  - { name: user.name, value: "" }
-  - { name: user.email, value: "" }

@@ -1,6 +1,0 @@
----
-
-- name: Caps -> Ctrl
-  command: gsettings set org.gnome.desktop.input-sources xkb-options "['ctrl:nocaps']"
-  register: result
-  changed_when: result.rc != 0
