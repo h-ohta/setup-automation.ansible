@@ -14,7 +14,8 @@ case $answer in
     echo -e "\e[32m Setup Continue... \e[0m"
     dpkg -l | grep ansible
     if [ $? -eq 1 ]; then
-      sudo apt install -y ansible
+      sudo add-apt-repository -y --update ppa:ansible/ansible
+      sudo apt install ansible
     fi
 
     ansible-playbook -vv -i ./$SCRIPT_DIR/inventories/localhost.ini, $SCRIPT_DIR/ansible/setup.yml --ask-become-pass
