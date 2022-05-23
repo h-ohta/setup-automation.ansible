@@ -1,0 +1,7 @@
+collections:
+  - source: ./ansible
+    type: dir
+
+  - name: https://github.com/tier4/autoware_ecu_system_setup.git
+    type: git
+    version: main

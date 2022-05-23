@@ -1,0 +1,15 @@
+# Required
+namespace: h-ohta
+name: setup-automation
+version: 0.1.0
+readme: README.md
+authors:
+  - Hiroki Ota <hiroki.ota@tier4.jp>
+
+# Optional
+description: Set up Automation
+
+dependencies: {}
+repository: https://github.com/h-ohta/setup-automation.ansible
+issues: https://github.com/h-ohta/setup-automation.ansible/issues
+build_ignore: []
