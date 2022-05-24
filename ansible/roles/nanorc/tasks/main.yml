@@ -1,10 +1,8 @@
 ---
 
 - name: Add items to ~/.nanorc
-  ansible.builtin.lineinfile:
-    dest: ~/.nanorc
-    line: "{{ item }}"
-    state: present
-    create: yes
+  ansible.builtin.copy:
+    src: "{{ item }}"
+    dest: "{{ ansible_env.HOME }}/.nanorc"
     mode: 0644
-  with_items: "{{ nanorc_items }}"
+  with_items: "{{ nanorc_file }}"

@@ -1,16 +1,2 @@
 ---
-nanorc_items:
-- set autoindent
-
-- "# Syntax Highlight"
-- include "/usr/share/nano/*"
-
-- "# Color"
-- set titlecolor white,green
-- set numbercolor white,green
-- set statuscolor white,green
-
-- "# Settings"
-- set linenumbers
-- set tabsize 2
-- set tabstospaces
+nanorc_file: .nanorc
