@@ -18,6 +18,7 @@ case $answer in
       sudo apt install ansible
     fi
 
+    ansible-galaxy collection install -r ./$SCRIPT_DIR/ansible-galaxy-requirements.yaml
     ansible-playbook -vv -i ./$SCRIPT_DIR/inventories/localhost.ini, $SCRIPT_DIR/ansible/setup.yml --ask-become-pass
     echo -e "\e[32m Complete \e[0m"
     ;;
