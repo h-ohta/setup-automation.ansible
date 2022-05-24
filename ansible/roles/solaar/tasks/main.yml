@@ -16,7 +16,7 @@
 - name: Copy files
   ansible.builtin.copy:
     src: "{{ item }}"
-    dest: ~/.config/autostart/
+    dest: "{{ ansible_env.HOME }}/.config/autostart/"
     mode: preserve
   with_fileglob:
     - ./*

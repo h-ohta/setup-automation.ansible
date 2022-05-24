@@ -1,6 +1,6 @@
 ---
 
-- name: Add items to ~/.nanorc
+- name: Copy .nanorc
   ansible.builtin.copy:
     src: "{{ item }}"
     dest: "{{ ansible_env.HOME }}/.nanorc"

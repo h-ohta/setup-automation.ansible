@@ -1,8 +1,8 @@
 ---
 
-- name: Add items to ~/.bash_aliases
+- name: Add items to .bash_aliases
   ansible.builtin.lineinfile:
-    dest: ~/.bash_aliases
+    dest: "{{ ansible_env.HOME }}/.bash_aliases"
     line: "alias {{ item.name }}='{{ item.command }}'"
     state: present
     create: yes

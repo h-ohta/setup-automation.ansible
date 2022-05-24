@@ -3,7 +3,7 @@
 - name: user-dirs.dirs
   ansible.builtin.copy:
     src: "{{ item }}"
-    dest: ~/.config
+    dest: "{{ ansible_env.HOME }}/.config"
     mode: 0644
   with_fileglob:
     - user-dirs.dirs

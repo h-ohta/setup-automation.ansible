@@ -14,60 +14,15 @@
 - name: Copy files
   ansible.builtin.copy:
     src: "{{ item }}"
-    dest: ~/
+    dest: "{{ ansible_env.HOME }}/"
     mode: 0644
   with_fileglob:
     - .xbindkeysrc
 
 - name: Apply auto start
   ansible.builtin.lineinfile:
-    dest: ~/.xsessionrc
+    dest: "{{ ansible_env.HOME }}/.xsessionrc"
     line: "xbindkeys -p"
     state: present
     create: yes
     mode: 0644
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
