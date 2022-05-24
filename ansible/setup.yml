@@ -6,24 +6,24 @@
     - ./vars.yml
   roles:
     # system
-    - { role: bash-aliases, tags: ["bash-aliases"] }
-    - { role: caps-to-ctrl, tags: ["caps-to-ctrl"] }
-    - { role: disable-paste-middle-key, tags: ["disable-paste-middle-key"] }
-    - { role: nvidia-driver, tags: ["nvidia-driver"] }
-    - { role: ros-localhost-only, tags: ["ros-localhost-only"] }
+    - { role: add_bash_aliases, tags: ["add_bash_aliases"] }
+    - { role: disable_paste_middle_key, tags: ["disable_paste_middle_key"] }
+    # - { role: nvidia_driver, tags: ["nvidia_driver"] }
+    - { role: ros_localhost_only, tags: ["ros_localhost_only"] }
     - { role: swapfile, tags: ["swapfile"] }
-    - { role: xdg-user-dirs-update-lang-c, tags: ["xdg-user-dirs-update-lang-c"] }
+    - { role: user_dirs_english, tags: ["user_dirs_english"] }
     # application
-    - { role: docker, tags: ["docker"] }
-    # - { role: endpoint-verification, tags: ["endpoint-verification"] }
-    - { role: fzf, tags: ["fzf"]}
-    - { role: git-common, tags: ["git-common"]}
-    - { role: google-chrome, tags: ["google-chrome"] }
-    - { role: install-apt-pip, tags: ["install-apt-pip"] }
+    - { role: install_apt_pip, tags: ["install_apt_pip"] }
     - { role: nanorc, tags: ["nanorc"] }
     - { role: simplescreenrecorder, tags: ["simplescreenrecorder"] }
     - { role: slack, tags: ["slack"] }
     - { role: solaar, tags: ["solaar"] }
-    - { role: tlp-powertop, tags: ["tlp-powertop"]}
-    - { role: touchpad-indicator, tags: ["touchpad-indicator"]}
-    - { role: vscode, tags: ["vscode"] }
+    - { role: tlp_powertop, tags: ["tlp_powertop"] }
+    - { role: touchpad_indicator, tags: ["touchpad_indicator"]}
+
+    # from autoware.ecu_system_setup
+    - { role: autoware.ecu_system_setup.fzf, tags: [fzf] }
+    - { role: autoware.ecu_system_setup.git_common, tags: [git_common] }
+    - { role: autoware.ecu_system_setup.google_chrome, tags: [google_chrome] }
+    - { role: autoware.ecu_system_setup.keyboard, tags: [keyboard] }
+    - { role: autoware.ecu_system_setup.vscode, tags: [vscode] }

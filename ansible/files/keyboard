@@ -1,0 +1,3 @@
+XKBLAYOUT="jp"
+XKBOPTIONS="ctrl:nocaps"
+BACKSPACE="guess"

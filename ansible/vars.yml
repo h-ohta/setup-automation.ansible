@@ -2,13 +2,30 @@
 # common
 arch: "amd64"
 
-# bash-aliases
+# add_bash_aliases
 bash_alias_items:
   - { name: gitka, command: "gitk --all &" }
   - { name: rosbag2_toggle_pause, command: "ros2 service call /rosbag2_player/toggle_paused rosbag2_interfaces/srv/TogglePaused" }
   - { name: rosdep-install, command: "rosdep install -iry --from-paths src --rosdistro ${ROS_DISTRO}" }
 
-# git-common
+# install_apt_pip
+apt_packages:
+  - curl
+  - snapd
+  - vlc
+
+pip_packages:
+  - cpplint
+  - ansible-lint
+
+# nvidia_driver
+nvidia_autoinstall: false
+nvidia_version: 460
+
+# autoware.ecu_system_setup.keyboard
+keyboard_layout_file: ./files/keyboard
+
+# autoware.ecu_system_setup.git-common
 git_config_items:
   - { name: user.name, value: "h-ohta" }
   - { name: user.email, value: "hiroki.ota@tier4.jp" }
@@ -16,24 +33,4 @@ git_config_items:
   - { name: core.editor, value: "nano" }
   - { name: alias.chk, value: "checkout" }
   - { name: alias.fetchpt, value: "fetch --prune --tags" }
-
-# install-apt-pip
-apt_packages:
-  - apt-transport-https
-  - ca-certificates
-  - curl
-  - git
-  - gnupg-agent
-  - software-properties-common
-  - snapd
-  - python3-pip
-  - python-is-python3
-  - vlc
-
-pip_packages:
-  - cpplint
-  - ansible-lint
-
-# nvidia-driver
-nvidia_autoinstall: false
-nvidia_version: 460
+  - { name: alias.commits, value: "commit --signoff" }
