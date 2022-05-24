@@ -36,7 +36,7 @@ nvidia_version: "460"
 ### For System Settings
 
 - add_bash_aliases: add aliases to `.bash_aliases`
-- user_dirs_english: Copy `user-dirs.dirs`
+- user_dirs_english: Copy `user-dirs.dirs` to Change directory name to English
 - disable_paste_middle_key: disable middle key paste for ThinkPad X1 Extreme
 - nvidia_driver: Install nvidia driver. `nvidia_autoinstall` variable is enabled by default.
 - swapfile: change swapfile size to your specified
