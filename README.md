@@ -6,6 +6,7 @@
 $ ./setup_automation.sh
 
 // run individual tasks
+$ ansible-galaxy collection install -r ansible-galaxy-requirements.yaml
 $ ansible-playbook ansible/setup.yml --list-tasks  // list all tasks with tags
 $ ansible-playbook ansible/setup.yaml --tags [some tags] --ask-become-pass // run some tasks
 $ ansible-playbook ansible/setup.yaml --tags caps_to_crtl --ask-become-pass // for example...
@@ -34,24 +35,19 @@ nvidia_version: "460"
 
 ### For System Settings
 
-- caps-to-ctrl: change caps key to ctrl
-- xdg-user-dirs-update-lang-c: Change Directory Japanese -> English
-- disable-paste-middle-key: disable middle key paste for ThinkPad X1 Extreme
-- nvidia-driver: Install nvidia driver. `nvidia_autoinstall` variable is enabled by default.
+- add_bash_aliases: add aliases to `.bash_aliases`
+- user_dirs_english: Copy `user-dirs.dirs`
+- disable_paste_middle_key: disable middle key paste for ThinkPad X1 Extreme
+- nvidia_driver: Install nvidia driver. `nvidia_autoinstall` variable is enabled by default.
 - swapfile: change swapfile size to your specified
 
 ### For Installing Software
 
 - docker
-- endpoint-verification
-- fzf
-- git-common: install and add `git_config_items` to .gitconfig
-- google-chrome
-- install-apt-pip: install packages of `apt_packages` and `pip_packages` variables
-- nanorc: locate `.nanorc` to your home directory
+- install_apt_pip: install packages of `apt_packages` and `pip_packages` variables
+- nanorc: copy `.nanorc` to your home directory
 - simplescreenrecorder
 - slack
 - solaar
-- tlp-powertop
-- touchpad-indicator
-- vscode
+- tlp_powertop
+- touchpad_indicator
