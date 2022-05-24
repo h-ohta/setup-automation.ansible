@@ -1,0 +1,9 @@
+---
+
+- name: user-dirs.dirs
+  ansible.builtin.copy:
+    src: "{{ item }}"
+    dest: ~/.config
+    mode: 0644
+  with_fileglob:
+    - user-dirs.dirs

@@ -1,6 +1,0 @@
----
-
-- name: Change directory Japanese -> English
-  shell: LANG=C xdg-user-dirs-update --force
-  register: result
-  changed_when: result.rc != 0
