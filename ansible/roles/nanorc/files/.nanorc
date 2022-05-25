@@ -1,14 +1,14 @@
 set autoindent
 
-"# Syntax Highlight"
-include "/usr/share/nano/*"
+# Syntax Highlight
+include "/usr/share/nano/*.nanorc"
 
-"# Color"
+# Color
 set titlecolor white,green
 set numbercolor white,green
 set statuscolor white,green
 
-"# Settings"
+# Settings
 set linenumbers
 set tabsize 2
 set tabstospaces
