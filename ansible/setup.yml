@@ -15,7 +15,6 @@
     # application
     - { role: install_apt_pip, tags: ["install_apt_pip"] }
     - { role: nanorc, tags: ["nanorc"] }
-    - { role: simplescreenrecorder, tags: ["simplescreenrecorder"] }
     - { role: slack, tags: ["slack"] }
     - { role: solaar, tags: ["solaar"] }
     - { role: tlp_powertop, tags: ["tlp_powertop"] }

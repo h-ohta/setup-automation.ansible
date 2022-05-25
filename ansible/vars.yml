@@ -13,6 +13,8 @@ apt_packages:
   - curl
   - snapd
   - vlc
+  - python3-pip
+  - simplescreenrecorder
 
 pip_packages:
   - cpplint
