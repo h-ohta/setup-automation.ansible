@@ -21,8 +21,11 @@ pip_packages:
   - ansible-lint
 
 # nvidia_driver
-nvidia_autoinstall: false
+nvidia_autoinstall: true
 nvidia_version: 460
+
+# slack
+slack_version: 4.26.1
 
 # autoware.ecu_system_setup.keyboard
 keyboard_layout_file: ./files/keyboard
@@ -36,3 +39,4 @@ git_config_items:
   - { name: alias.chk, value: "checkout" }
   - { name: alias.fetchpt, value: "fetch --prune --tags" }
   - { name: alias.commits, value: "commit --signoff" }
+  - { name: url.git@github.com:.insteadOf, value: "https://github.com/" }
