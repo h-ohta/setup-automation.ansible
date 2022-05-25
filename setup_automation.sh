@@ -1,32 +1,33 @@
 #! /bin/bash
 
-SCRIPT_DIR=$(cd $(dirname $0); pwd)
+#
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 
-if [ $(id -u) -eq 0 ];then
-  echo -e "\e[33m Do not run as root \e[0m" >&2
-  exit 1
+if [ "$(id -u)" -eq 0 ]; then
+    echo -e "\e[33m Do not run as root \e[0m" >&2
+    exit 1
 fi
 
-read -p ">  Do you run setup? This will take a while. (y/N)? " answer
+read -r -p ">  Do you run setup? This will take a while. (y/N)? " answer
 
 case $answer in
-  [yY]* )
+[yY]*)
     echo -e "\e[32m Setup Continue... \e[0m"
     dpkg -l | grep ansible
     if [ $? -eq 1 ]; then
-      sudo add-apt-repository -y --update ppa:ansible/ansible
-      sudo apt install -y ansible
+        sudo add-apt-repository -y --update ppa:ansible/ansible
+        sudo apt install -y ansible
     fi
 
-    ansible-galaxy collection install -r $SCRIPT_DIR/ansible-galaxy-requirements.yaml
-    ansible-playbook -vv -i $SCRIPT_DIR/inventories/localhost.ini, $SCRIPT_DIR/ansible/setup.yml --ask-become-pass
+    ansible-galaxy collection install -r "$SCRIPT_DIR"/ansible-galaxy-requirements.yaml
+    ansible-playbook -vv -i "$SCRIPT_DIR"/inventories/localhost.ini, "$SCRIPT_DIR"/ansible/setup.yml --ask-become-pass
     echo -e "\e[32m Complete \e[0m"
     ;;
-  [nN]* )
+[nN]*)
     echo -e "\e[33m error: Setup Canceled \e[0m"
     exit 0
     ;;
-  *)
+*)
     echo -e "\e[33m error: undefined keys \e[0m"
     exit 1
     ;;

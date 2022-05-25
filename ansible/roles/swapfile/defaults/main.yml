@@ -1,3 +1,2 @@
----
 swap_file_path: /swapfile
-swap_file_size: "32G"
+swap_file_size: 32G

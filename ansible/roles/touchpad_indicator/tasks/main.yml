@@ -1,14 +1,12 @@
----
-
 - name: Add ppas
   apt_repository:
     repo: ppa:atareao/atareao
     state: present
-  become: yes
+  become: true
 
 - name: Install
   ansible.builtin.apt:
     name: touchpad-indicator
     state: present
-    update_cache: yes
-  become: yes
+    update_cache: true
+  become: true

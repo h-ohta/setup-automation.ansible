@@ -1,21 +1,18 @@
----
-
-
 - name: Add ppas
   ansible.builtin.apt_repository:
     repo: ppa:graphics-drivers/ppa
     state: present
-  become: yes
+  become: true
 
 - name: Install recommended version
   command: ubuntu-drivers autoinstall
-  become: yes
+  become: true
   when: nvidia_autoinstall
 
 - name: Install specified version
   ansible.builtin.apt:
     name: nvidia-driver-{{ nvidia_version }}
     state: present
-    update_cache: yes
-  become: yes
+    update_cache: true
+  become: true
   when: not nvidia_autoinstall

@@ -1,7 +1,8 @@
 # setup-automation.ansible
 
 ## Commands
-```
+
+```bash
 // run all tasks
 $ ./setup_automation.sh
 
@@ -13,22 +14,22 @@ $ ansible-playbook ansible/setup.yaml --tags caps_to_crtl --ask-become-pass // f
 ```
 
 ## Global Variables
+
 You can edit your specified variables in `ansible/vars.yml`.
 It overrides local variables in each roles as follows.
 
-``` yaml
+```yaml
 # ansible/nvidia-driver/defaults/main.yml
----
+
 nvidia_autoinstall: true
 nvidia_version: "460"
 ```
 
-``` yaml
+```yaml
 # ansible/vars.yml
-...
+
 nvidia_autoinstall: false
 nvidia_version: "460"
-...
 ```
 
 ## Registered Tags
@@ -46,7 +47,6 @@ nvidia_version: "460"
 - docker
 - install_apt_pip: install packages of `apt_packages` and `pip_packages` variables
 - nanorc: copy `.nanorc` to your home directory
-- simplescreenrecorder
 - slack
 - solaar
 - tlp_powertop

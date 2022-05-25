@@ -1,18 +1,16 @@
----
-
 - name: install tlp and powertop
-  ansible.builtin.apt: 
-    name: 
+  ansible.builtin.apt:
+    name:
       - tlp
       - tlp-rdw
       - powertop
     state: present
-    update_cache: yes
-  become: yes
+    update_cache: true
+  become: true
 
 - name: start and enable tlp
   ansible.builtin.systemd:
     name: tlp
     state: started
-    enabled: yes
-  become: yes
+    enabled: true
+  become: true

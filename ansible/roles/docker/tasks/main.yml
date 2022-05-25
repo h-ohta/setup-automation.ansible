@@ -1,16 +1,14 @@
----
-
 - name: Add an Apt signing key, uses whichever key is at the URL
   ansible.builtin.apt_key:
-    url: "https://download.docker.com/linux/ubuntu/gpg"
+    url: https://download.docker.com/linux/ubuntu/gpg
     state: present
-  become: yes
+  become: true
 
 - name: Add repository
   ansible.builtin.apt_repository:
     repo: deb [arch={{ arch }}] https://download.docker.com/linux/ubuntu {{ ansible_lsb.codename }} stable
     state: present
-  become: yes
+  become: true
 
 - name: Install
   ansible.builtin.apt:
@@ -19,5 +17,5 @@
       - docker-ce-cli
       - containerd.io
     state: present
-    update_cache: yes
-  become: yes
+    update_cache: true
+  become: true

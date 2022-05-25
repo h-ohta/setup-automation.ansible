@@ -1,11 +1,9 @@
----
-
 - name: install gdebi
-  ansible.builtin.apt: 
+  ansible.builtin.apt:
     name: gdebi
     state: present
-    update_cache: yes
-  become: yes
+    update_cache: true
+  become: true
 
 - name: Get deb
   ansible.builtin.get_url:
@@ -18,4 +16,4 @@
   command: gdebi --non-interactive {{ get_url.dest }}
   register: result
   changed_when: result.rc != 0
-  become: yes
+  become: true

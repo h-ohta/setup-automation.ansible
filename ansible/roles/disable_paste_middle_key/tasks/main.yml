@@ -1,5 +1,3 @@
----
-
 - name: Install
   ansible.builtin.apt:
     name:
@@ -7,9 +5,8 @@
       - xsel
       - xdotool
     state: present
-    update_cache: yes
-  become: yes
-
+    update_cache: true
+  become: true
 
 - name: Copy files
   ansible.builtin.copy:
@@ -22,7 +19,7 @@
 - name: Apply auto start
   ansible.builtin.lineinfile:
     dest: "{{ ansible_env.HOME }}/.xsessionrc"
-    line: "xbindkeys -p"
+    line: xbindkeys -p
     state: present
-    create: yes
+    create: true
     mode: 0644

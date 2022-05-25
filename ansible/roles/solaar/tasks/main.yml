@@ -1,17 +1,15 @@
----
-
 - name: Add ppas
   ansible.builtin.apt_repository:
     repo: ppa:solaar-unifying/ppa
     state: present
-  become: yes
+  become: true
 
 - name: Install
   ansible.builtin.apt:
     name: solaar
     state: present
-    update_cache: yes
-  become: yes
+    update_cache: true
+  become: true
 
 - name: Copy files
   ansible.builtin.copy:
