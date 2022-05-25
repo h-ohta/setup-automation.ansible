@@ -15,11 +15,11 @@ case $answer in
     dpkg -l | grep ansible
     if [ $? -eq 1 ]; then
       sudo add-apt-repository -y --update ppa:ansible/ansible
-      sudo apt install ansible
+      sudo apt install -y ansible
     fi
 
-    ansible-galaxy collection install -r ./$SCRIPT_DIR/ansible-galaxy-requirements.yaml
-    ansible-playbook -vv -i ./$SCRIPT_DIR/inventories/localhost.ini, $SCRIPT_DIR/ansible/setup.yml --ask-become-pass
+    ansible-galaxy collection install -r $SCRIPT_DIR/ansible-galaxy-requirements.yaml
+    ansible-playbook -vv -i $SCRIPT_DIR/inventories/localhost.ini, $SCRIPT_DIR/ansible/setup.yml --ask-become-pass
     echo -e "\e[32m Complete \e[0m"
     ;;
   [nN]* )
