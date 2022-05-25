@@ -11,7 +11,7 @@
     # - { role: nvidia_driver, tags: ["nvidia_driver"] }
     - { role: ros_localhost_only, tags: ["ros_localhost_only"] }
     - { role: swapfile, tags: ["swapfile"] }
-    - { role: user_dirs_english, tags: ["user_dirs_english"] }
+    # - { role: user_dirs_english, tags: ["user_dirs_english"] }
     # application
     - { role: install_apt_pip, tags: ["install_apt_pip"] }
     - { role: nanorc, tags: ["nanorc"] }
