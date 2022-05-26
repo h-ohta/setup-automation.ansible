@@ -1,7 +1,7 @@
 # common
 arch: amd64
 
-# add_bash_aliases
+# add_bash_settings
 bash_alias_items:
   - { name: gitka, command: gitk --all & }
   # prettier-ignore
@@ -9,6 +9,10 @@ bash_alias_items:
   # yamllint disable rule:quoted-strings
   # prettier-ignore
   - { name: rosdep-install, command: "rosdep install -iry --from-paths src --rosdistro ${ROS_DISTRO}" }
+
+bashrc_items:
+  - export RCUTILS_COLORIZED_OUTPUT=1
+  - 'export RCUTILS_CONSOLE_OUTPUT_FORMAT="[{severity} {time}] [{name}] {function_name}(): {message}"'
 
 # install_apt_pip
 apt_packages:

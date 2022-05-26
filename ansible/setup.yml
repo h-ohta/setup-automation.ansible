@@ -5,7 +5,7 @@
     - ./vars.yml
   roles:
     # system
-    - { role: add_bash_aliases, tags: [add_bash_aliases] }
+    - { role: add_bash_settings, tags: [add_bash_settings] }
     - { role: disable_paste_middle_key, tags: [disable_paste_middle_key] }
     # - { role: nvidia_driver, tags: [nvidia_driver] }
     - { role: ros_localhost_only, tags: [ros_localhost_only] }
