@@ -1,10 +1,12 @@
 - name: add to .bashrc
-  ansible.builtin.lineinfile:
-    dest: "{{ ansible_env.HOME }}/.bashrc"
-    line: if [ -f ~/.ros_localhost_only ]; then . ~/.ros_localhost_only; fi
+  ansible.builtin.blockinfile:
+    path: "{{ ansible_env.HOME }}/.bashrc"
     state: present
     create: true
     mode: 0644
+    marker: "# {mark} ros_localhost_only"
+    block: |
+      if [ -f ~/.ros_localhost_only ]; then . ~/.ros_localhost_only; fi
 
 - name: Copy files
   ansible.builtin.copy:
