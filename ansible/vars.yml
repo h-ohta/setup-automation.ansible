@@ -21,12 +21,12 @@ apt_packages:
   - vlc
   - python3-pip
   - simplescreenrecorder
-  - pre-commit
   - python-is-python3
 
 pip_packages:
   - cpplint
   - ansible-lint
+  - pre-commit
 
 # nvidia_driver
 nvidia_autoinstall: true
