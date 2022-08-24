@@ -47,5 +47,6 @@ git_config_items:
   - { name: alias.chk, value: checkout }
   - { name: alias.fetchpt, value: fetch --prune --tags }
   - { name: alias.commits, value: commit --signoff }
+  - { name: plog, value: log --oneline --pretty='%C(yellow)%h %C(green)(%ai) %C(reset)%s %C(blue)[%an(%ae)] %C(red)%d' }
   # yamllint disable rule:quoted-strings
   - { name: "url.git@github.com:.insteadOf", value: "https://github.com/" }
